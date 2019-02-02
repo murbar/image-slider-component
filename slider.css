@@ -10,10 +10,9 @@ body {
 
 .slider-component {
   width: 1200px;
-  /* max-width: 1200px; */
   margin: auto;
-  /* overflow: hidden; */
-  border: 3px solid gray;
+  overflow: hidden;
+  position: relative;
 }
 
 .images-container {
@@ -24,4 +23,25 @@ body {
 
 .slide-transition {
   transition: transform 0.4s ease-in-out;
+}
+
+.slider-control-prev,
+.slider-control-next {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 2%;
+  z-index: 100;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.slider-control-next {
+  left: auto;
+  right: 2%;
 }
