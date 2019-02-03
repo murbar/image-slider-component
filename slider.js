@@ -2,7 +2,6 @@ class ImageSlider {
   constructor(config) {
     this.config = config;
     this.currentIndex = 1;
-    // this.getPageElements();
     this.slider = document.querySelector('.slider-component');
     this.viewport = this.slider.querySelector('.images-container');
     this.sliderWidth = this.viewport.clientWidth;
@@ -13,8 +12,6 @@ class ImageSlider {
     this.cloneFirstAndLast();
     this.transitionSlide();
   }
-  // getPageElements() {
-  // }
   initEventListeners() {
     this.nextBtn.addEventListener('click', () => this.showNext());
     this.prevBtn.addEventListener('click', () => this.showPrev());
