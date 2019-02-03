@@ -8,11 +8,11 @@ class ImageSlider {
     this.images = this.slider.querySelectorAll('img');
     this.nextBtn = this.slider.querySelector('.slider-control-next');
     this.prevBtn = this.slider.querySelector('.slider-control-prev');
-    this.initEventListeners();
+    this.attachListeners();
     this.cloneFirstAndLast();
     this.transitionSlide();
   }
-  initEventListeners() {
+  attachListeners() {
     this.nextBtn.addEventListener('click', () => this.showNext());
     this.prevBtn.addEventListener('click', () => this.showPrev());
     this.viewport.addEventListener('transitionend', () =>
@@ -30,8 +30,8 @@ class ImageSlider {
     this.images = this.slider.querySelectorAll('img');
   }
   transitionSlide() {
-    this.viewport.style.transform = `translateX(${-this.sliderWidth *
-      this.currentIndex}px)`;
+    const transformPx = -this.sliderWidth * this.currentIndex;
+    this.viewport.style.transform = `translateX(${transformPx}px)`;
   }
   showNext() {
     if (this.currentIndex >= this.images.length - 1) return;
@@ -57,7 +57,6 @@ class ImageSlider {
   reset() {
     this.sliderWidth = this.viewport.clientWidth;
     this.transitionSlide();
-    console.log('reseting');
   }
 }
 
