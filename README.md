@@ -1,4 +1,4 @@
-# A Super Clean Little Image Slider Component
+# A Nice Little Image Slider Component
 
 - No dependencies
 - CSS transitions
