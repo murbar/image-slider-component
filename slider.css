@@ -6,13 +6,20 @@
 
 body {
   padding: 10em 0;
+  background: #303030;
 }
 
 .slider-component {
-  width: 1200px;
+  width: 100%;
+  max-width: 1000px;
   margin: auto;
   overflow: hidden;
   position: relative;
+}
+
+.slider-component img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .images-container {
@@ -22,7 +29,7 @@ body {
 }
 
 .slide-transition {
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .slider-control-prev,
@@ -32,7 +39,7 @@ body {
   top: 50%;
   left: 2%;
   z-index: 100;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   border: none;
   background-color: hsla(0, 0%, 0%, 0.7);
